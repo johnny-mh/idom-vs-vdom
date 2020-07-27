@@ -18,10 +18,15 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "incremental-dom": "^0.7.0"
+    "incremental-dom": "^0.7.0",
+    "shared": "^0.0.0"
   },
   "devDependencies": {
+    "css-loader": "^4.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.44.0",
