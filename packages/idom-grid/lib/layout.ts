@@ -23,7 +23,7 @@ export function render(options: {
 }
 
 function layoutOpen() {
-  elementOpen('div', '', ['id', 'idom-grid']);
+  elementOpen('div', '', ['id', 'idom-grid', 'class', 'grid']);
 }
 
 function layoutClose() {
@@ -31,7 +31,7 @@ function layoutClose() {
 }
 
 function header(titleList: string[]) {
-  elementOpen('div', '', ['class', 'tr']);
+  elementOpen('div', '', ['class', 'tr header']);
   titleList.forEach(title => {
     elementOpen('div', '', ['class', 'th']);
     text(title);
@@ -42,6 +42,8 @@ function header(titleList: string[]) {
 
 function body(options: {data: {[key: string]: any}[]; titleList: string[]}) {
   const {data, titleList} = options;
+
+  elementOpen('div', '', ['class', 'scroll']);
 
   data.forEach(datum => {
     elementOpen('div', datum.id, ['class', 'tr']);
@@ -58,4 +60,6 @@ function body(options: {data: {[key: string]: any}[]; titleList: string[]}) {
 
     elementClose('div');
   });
+
+  elementClose('div');
 }

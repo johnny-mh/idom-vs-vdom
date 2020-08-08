@@ -31,7 +31,7 @@ const App = () => {
   }, []);
 
   return (
-    <div id="vdom-grid">
+    <div id="vdom-grid" className="grid">
       <Header titleList={titleList} />
       <Body data={data} titleList={titleList} />
     </div>
